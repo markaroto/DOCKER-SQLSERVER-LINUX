@@ -1,0 +1,23 @@
+version: '2'
+services:
+  sqlserver:
+    image: microsoft/mssql-server-linux
+    container_name: sqlserver_linux
+    volumes:
+      - D:\Docker_Sqlserver\dados:/var/opt/mssql
+    ports:
+      - "1433:1433"
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Bolinha@2016
+  
+  sqllinux:
+    image: marcosflavio/sqlserver
+    container_name: sqlserver_linux
+    volumes:
+      - D:\Docker_Sqlserver\dados1:/var/opt/mssql
+    ports:
+      - "1433:1433"
+    environment: 
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Bolinha@2016
