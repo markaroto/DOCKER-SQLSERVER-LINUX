@@ -7,7 +7,7 @@ RUN apt-get install apt-transport-https
 RUN  apt-get update &&  apt-get install -y mssql-server
 COPY sqlservr.sh /opt/mssql/bin/
 RUN chmod +x /opt/mssql/bin/sqlservr.sh
-
-CMD /opt/mssql/bin/sqlservr.sh
+RUN sed -i -e 's/\r$//'  /opt/mssql/bin/sqlservr.sh
+CMD ./opt/mssql/bin/sqlservr.sh
 
 

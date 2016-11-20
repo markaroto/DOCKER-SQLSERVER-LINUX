@@ -1,6 +1,5 @@
 #!/bin/bash
-#
-# Microsoft(R) SQL Server(R) launch script for Docker
+# 
 #
 
 ACCEPT_EULA=${ACCEPT_EULA:-}
